@@ -22,14 +22,3 @@ bash "change hostname" do
     hostname #{hostname}
   EOS
 end
-
-# commands and tools
-%w{
-  git-all
-  htop
-  tree
-  }.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
