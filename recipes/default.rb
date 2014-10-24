@@ -15,7 +15,7 @@ template "/etc/sysconfig/network" do
   group "root"
 end
 
-hostname = node['hostname']
+hostname = node['var']['hostname']
 bash "change hostname" do
   user "root"
   code <<-EOS
